@@ -87,27 +87,13 @@ $(function() {
     });
     
 });
+
 $(document).on('shown.bs.modal', function (e) {
   var videoId = $(e.relatedTarget).data('video-target');
   if (videoId) {
     document.getElementById(videoId).play();
   }
 });
-
-$(document).on('hidden.bs.modal', function (e) {
-  var videoElement = document.getElementById('MBACupVideo');
-  if (videoElement) {
-    videoElement.pause();
-  }
-});
-
-$(document).on('shown.bs.modal', function (e) {
-  var videoElement = document.getElementById('MBACupVideo');
-  if (videoElement) {
-    videoElement.play();
-  }
-});
-
 $(document).on('shown.bs.modal', '#portfolioItem6', function () {
   var videoElement = document.getElementById('MBACupVideo');
   if (videoElement) {
